@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".UserDetail">
+
+    <View
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:id="@+id/view2"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="8dp"/>
+    <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp" app:srcCompat="@drawable/leftarrow"
+            android:id="@+id/fmd"
+            app:layout_constraintBottom_toBottomOf="@+id/view2" app:layout_constraintTop_toTopOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="@+id/view2"/>
+    <TextView
+            android:text="MY PROFILE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileHeader"
+            android:textColor="#b1b8c5"
+            app:layout_constraintTop_toTopOf="@+id/view2" app:layout_constraintBottom_toBottomOf="@+id/view2"
+            app:layout_constraintStart_toEndOf="@+id/fmd" android:layout_marginStart="32dp"/>
+    <View
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:id="@+id/view4" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="@+id/fmd" app:layout_constraintEnd_toEndOf="@+id/view2"
+    />
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp" app:srcCompat="@android:color/transparent"
+            android:id="@+id/userDetailimage"
+            app:layout_constraintBottom_toBottomOf="@+id/view4"
+            app:layout_constraintStart_toStartOf="@+id/view4" app:layout_constraintTop_toTopOf="@+id/view4"/>
+    <TextView
+            android:text="Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#b1b8c5"
+            android:id="@+id/userHeader" app:layout_constraintStart_toEndOf="@+id/userDetailimage"
+            android:layout_marginStart="33dp"
+            app:layout_constraintTop_toTopOf="@+id/view4" app:layout_constraintBottom_toBottomOf="@+id/view4"
+            app:layout_constraintVertical_bias="0.277"/>
+    <TextView
+            android:text="User"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/userFirstlast" app:layout_constraintStart_toEndOf="@+id/userDetailimage"
+            android:layout_marginStart="33dp"
+            android:textColor="#6374f3"
+            app:layout_constraintBottom_toBottomOf="@+id/userDetailimage"
+            app:layout_constraintTop_toTopOf="@+id/userDetailimage" android:layout_marginTop="8dp"/>
+    <fragment android:layout_width="match_parent"
+              android:layout_height="240dp"
+              tools:ignore="MissingConstraints"
+              android:background="@drawable/border"
+              android:layout_marginTop="8dp"
+              android:name="com.google.android.gms.maps.SupportMapFragment"
+              app:layout_constraintTop_toBottomOf="@+id/view4"
+              app:layout_constraintStart_toStartOf="@+id/userDetailimage" app:layout_constraintEnd_toEndOf="@+id/view4"
+              android:id="@+id/map"/>
+    <View
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:background="@drawable/border"
+            android:id="@+id/view6"
+            app:layout_constraintTop_toBottomOf="@+id/map"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+            android:text="Gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#b1b8c5"
+            android:id="@+id/userGender" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="@+id/view6" app:layout_constraintStart_toStartOf="@+id/view6"
+            android:layout_marginStart="16dp"/>
+    <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp" app:srcCompat="@android:color/transparent"
+            android:id="@+id/genderView"
+            app:layout_constraintBottom_toBottomOf="@+id/view6"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/userGender" app:layout_constraintStart_toStartOf="@+id/view6"
+            app:layout_constraintEnd_toEndOf="@+id/view6"/>
+    <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/view7"
+            android:background="@drawable/border"
+            app:layout_constraintEnd_toEndOf="@+id/map"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/view6"
+            app:layout_constraintTop_toBottomOf="@+id/map"/>
+    <TextView
+            android:text="Age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#b1b8c5"
+            android:id="@+id/userAge" app:layout_constraintStart_toStartOf="@+id/view7"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="@+id/view7"/>
+    <TextView
+            android:text="Age Index"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#b1b8c5"
+            android:id="@+id/userAgeindex"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/userAge"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="@+id/view7"/>
+    android:layout_width="100dp" android:layout_height="100dp"/>
+</android.support.constraint.ConstraintLayout>
