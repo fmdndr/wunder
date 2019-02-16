@@ -1,6 +1,6 @@
 # Wunder Candidate
 
-> Android App with Sockot.io
+> Android App with Socket.io
 
 
 
